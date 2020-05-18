@@ -1,0 +1,166 @@
+body {
+	margin: auto;
+	padding: 50px;
+	color: #000;
+	font-family: 'Slabo 27px', serif;
+    background-image: 
+}
+
+
+/* ---- Set up site grid ---- */
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 300px 2fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"logo banner banner"
+		"nav nav nav"
+		"main main main"
+		"footer footer footer";
+	grid-gap: 4px;
+}
+
+/* ---- End of grid setup ----*/
+
+/* -000- Area styling -000- */
+
+.box {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #CCCCCC;
+}
+
+/* Area colouring... */
+
+/* logo, banner and footer background are the same */
+.logo, .banner, {
+	background-color: #000000; /*grey*/
+}
+
+.nav, .footer, {
+	background-color: #CCCCCC; /*grey*/
+}
+
+/* Set font on dark areas to white */
+.logo, .banner, .footer, .main {
+	color: #fff;
+}
+
+
+/* Area specifics */
+
+.logo {
+	grid-area: logo;
+	padding: 0;
+	height: 199px;
+	width: 299px;
+	background-image: url(Images/ab)
+	}
+
+.banner {
+	grid-area: banner;
+    text-align: center;
+    font-size: 150%;
+    background-color: #000000;
+}
+
+.nav {
+	grid-area: nav;
+	background-color: #CCCCCC; /* Dark Blue */
+	font-size: 150%;
+	text-align: center;
+}
+
+.main {
+	grid-area: main;
+	background-color: #000000; /* pale blue */
+	border: solid 1px #bb9977;
+}
+
+
+.footer {
+	grid-area: footer;
+	text-align: right;
+}
+
+/* -000- End of area styline -000- */
+
+h1, h2, h3, h4{
+	font-family: 'Lato', sans-serif;
+}
+
+/* Navigation Links */
+.nav a {font-weight: bold;}
+.nav a:link, .nav a:visited {color: #fff;} /* white */
+.nav a:hover {color: #000; text-decoration: none;} /* black */
+
+/* Menu styling */
+
+.center_image {
+	text-align: center;
+}
+
+/* contact form styling */
+.contact {
+    width 100%;
+}
+
+.center_image {
+	text-align: center;
+}
+
+/*gallery for profiles*/
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 32.0%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
